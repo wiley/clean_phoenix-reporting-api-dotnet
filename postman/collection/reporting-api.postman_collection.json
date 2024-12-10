@@ -1,0 +1,70 @@
+{
+	"info": {
+		"_postman_id": "8560c741-eeb9-4e92-846a-d53e1b0a7df1",
+		"name": "Reporting API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "7811012"
+	},
+	"item": [
+		{
+			"name": "Power BI report access",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"groupId\": \"111b58d8-1987-470b-b945-613c1053ecee\",\r\n    \"reportId\": \"cdbc798c-1735-460e-aca0-4f9fd0549d50\",\r\n    \"reportSectionId\": \"0b040472c9b0a45e0402\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{reporting_domain}}/api/v4/reports/powerbi-access/",
+					"host": [
+						"{{reporting_domain}}"
+					],
+					"path": [
+						"api",
+						"v4",
+						"reports",
+						"powerbi-access",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{phoenix_access_token}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
